@@ -1,0 +1,33 @@
+.advantages{
+    &__blocks{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 60px;
+    }
+    &__block{
+        max-width: 270px;
+        text-align:center;
+        i{
+            font-size: 70px;
+            color: #FF0000;
+        }
+    }
+    &__textTitle{
+        font-size: 18;
+        font-weight: 700;
+        color: #0D0D0D;
+        margin-top: 35px;
+    }
+    &__textDescr{
+        margin-top: 20px;
+        font-size: 14px;
+        font-weight: 300;
+        color: #0D0D0D;
+        a {
+            text-decoration-line: underline;
+            color: #FF0000;
+            font-size: 14px;
+            font-weight: 300;
+        }
+    }
+}

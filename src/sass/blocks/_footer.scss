@@ -1,0 +1,47 @@
+.footer{
+    height: 630px;
+    position: relative;
+    &__info{
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 460px;
+        height: 270px;
+        background: $main-color;
+        padding: 50px 54px 60px 53px;
+    }
+    &__addr{
+        margin-bottom: 36px;
+        font-size: 20px;
+        font-weight: 500;
+        text-align: center;
+        line-height: 20px;
+    }
+    &__phone{
+        color: #fff;
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 38px;
+        display: block;
+        text-align: center;
+        transition: 0.6s all;
+        line-height: 20px;
+    }
+    &__social{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__social-item{
+        font-size: 40px;
+        display: inline-block;
+        color: white;
+        transition: 0.6s all;
+        text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+
+        &:not(:last-child){
+            margin-right: 30px;
+        }
+    }
+}

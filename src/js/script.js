@@ -71,4 +71,26 @@ $(document).ready(function(){
         $('.overlay, #order').fadeIn('slow');
       });
     });
+
+    
+    $('#consultation-form').validate();
+    $('#consultation form').validate({
+      rules: {
+        name: "required",
+        phone: "required",
+        email: {
+          required: true,
+          email: true
+        }
+      },
+      messages: {
+        name: "Пожалуйста введите свое имя",
+        phone: "Номер введи номер бля",
+        email: {
+        required:" Введи почту я сказал",
+        email: "Неправильно введен твой адресс"
+        }
+      }
+    });
+    $('#order form').validate();
   });

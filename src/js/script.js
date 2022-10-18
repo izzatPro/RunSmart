@@ -41,5 +41,34 @@ $(document).ready(function(){
     toggleSlide('.catalog-item__back');
 
     //Modal
-    $('[data-modal = consultation]').fadeOut();
+    //Открываем модальные окна в хедере
+    $('[data-modal = consultation]').on('click', function(){
+      $('.overlay, #consultation').fadeIn('slow');
+      $('html, body').css({
+        overflow: 'hidden',
+        height: '100%'
+    });
+      //Закрываем модальные окна везде где кликнем на крестик
+      $('.modal__close').on('click',function(){
+        $('.overlay, #consultation, #thanks, #order').fadeOut('slow');
+        $('html, body').css({
+          overflow: 'auto',
+          height: 'auto'
+      });
+      });
+    });
+    //Открываем а разделе купить пульсометры
+    $('.button_mini').on('click', function(){
+      $('.overlay, #order').fadeIn('slow');
+      $('html, body').css({
+        overflow: 'hidden',
+        height: '100%'
+    });
+    });
+    $('.button_mini').each(function(i){
+      $(this).on('click', function(){
+        $('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text());
+        $('.overlay, #order').fadeIn('slow');
+      });
+    });
   });

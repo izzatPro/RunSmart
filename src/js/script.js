@@ -73,24 +73,30 @@ $(document).ready(function(){
     });
 
     
-    $('#consultation-form').validate();
-    $('#consultation form').validate({
-      rules: {
-        name: "required",
-        phone: "required",
-        email: {
-          required: true,
-          email: true
+
+    function validateForms(form){
+      $(form).validate({
+        rules: {
+          name: "required",
+          phone: "required",
+          email: {
+            required: true,
+            email: true
+          }
+        },
+        messages: {
+          name: "Пожалуйста введите свое имя",
+          phone: "Номер введи номер бля",
+          email: {
+          required:" Введи почту я сказал",
+          email: "Неправильно введен твой адресс"
+          }
         }
-      },
-      messages: {
-        name: "Пожалуйста введите свое имя",
-        phone: "Номер введи номер бля",
-        email: {
-        required:" Введи почту я сказал",
-        email: "Неправильно введен твой адресс"
-        }
-      }
-    });
-    $('#order form').validate();
+      });
+    }
+    validateForms('#consultation-form');
+    validateForms('#consultation form');
+    validateForms('#order form');
+
+    $('input[name=phone]').mask("+998 (66) 666-66-66");
   });

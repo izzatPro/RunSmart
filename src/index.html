@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/bootstrap-reboot.css">
@@ -13,7 +14,7 @@
     <title>RunSmart magazine</title>
 </head>
 <body>
-   <section class="promo">
+   <section id="up" class="promo">
     <div class="container">
        <header class="header">
         <a href="#" class="header__logo">
@@ -428,7 +429,7 @@
    <section class="review">
     <div class="container">
         <div class="title">отзывы клиентов</div>
-            <div class="review-content">
+            <div class="review-content  animate__animated animate__rotateInDownLeft">
                 <img src="icons/photo_1.png" alt="">
                 <div class="review-content__item">
                     <div class="review-content__title">Ирина Иванченко </div>
@@ -516,6 +517,13 @@
 
         </div>
     </div>
+
+    <a href="#up" class="pageup">
+         <img src="img/circle-up-regular.svg" alt="">
+    </a>
+    
+
+
 
    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>   

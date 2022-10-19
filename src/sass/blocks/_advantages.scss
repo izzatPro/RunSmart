@@ -11,6 +11,16 @@
             font-size: 70px;
             color: #FF0000;
         }
+        .fa-heart-pulse{
+            animation-name: heartbeat;
+            animation-duration: 1.7s;
+            animation-timing-function: ease;
+            animation-iteration-count: infinite;
+            animation: heartbeat  1.7s ease infinite;
+            &:hover {
+                animation-play-state: paused;
+            }
+        }
     }
     &__textTitle{
         font-size: 18;
